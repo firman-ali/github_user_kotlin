@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GitHub User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_2">Following</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="share">Share</string>
+    <string name="github">GITHUB</string>
+    <string name="tab_type">tab_follow</string>
+    <string name="github_icon">gitHub_icon</string>
+    <string name="user_profile">user_profile_image</string>
+</resources>

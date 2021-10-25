@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailUserActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_detail_photo"
+        style="@style/ImageViewProfile"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:contentDescription="@string/user_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_detail_name"
+        style="@style/PrimaryTextView.Title"
+        android:layout_width="250dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_detail_photo"
+        app:layout_constraintTop_toTopOf="@+id/iv_detail_photo"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/tv_detail_username"
+        style="@style/PrimaryTextView.SubTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
+        tools:text="username" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_name" />
+
+    <TextView
+        android:id="@+id/tv_detail_location"
+        style="@style/PrimaryTextView.Content"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="@+id/location"
+        tools:text="Ini location" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/company"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_username"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/tv_detail_company"
+        style="@style/PrimaryTextView.Content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_company"
+        app:layout_constraintTop_toTopOf="@+id/tv_company" />
+
+    <TextView
+        android:id="@+id/tv_detail_followers"
+        style="@style/SecondaryTextView"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_username"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/tv_follower"
+        style="@style/SecondaryTextView.Title"
+        android:text="@string/followers"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_followers"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_followers" />
+
+    <TextView
+        android:id="@+id/tv_detail_following"
+        style="@style/SecondaryTextView.Content"
+        app:layout_constraintStart_toEndOf="@+id/tv_follower"
+        app:layout_constraintTop_toTopOf="@+id/tv_follower"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/tv_following"
+        style="@style/SecondaryTextView.Title"
+        android:text="@string/following"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_following"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_following" />
+
+    <TextView
+        android:id="@+id/tv_detail_repo"
+        style="@style/SecondaryTextView.Content"
+        app:layout_constraintStart_toEndOf="@+id/tv_following"
+        app:layout_constraintTop_toTopOf="@+id/tv_following"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/tv_repo"
+        style="@style/SecondaryTextView.Title"
+        android:text="@string/repository"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_repo"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_repo" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/tab_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follower"
+        app:tabTextColor="@android:color/black" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <ProgressBar
+        android:id="@+id/detail_ProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
