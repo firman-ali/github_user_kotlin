@@ -1,16 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.GitHubUser" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/dark_purple</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_500</item>
-        <item name="colorSecondaryVariant">@color/dark_blue</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/blue_green</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+        <item name="colorOnSecondary">@color/white</item>
+
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="itemRowDialogHolo">
+        <item name="android:background">@android:drawable/dialog_holo_dark_frame</item>
     </style>
 </resources>

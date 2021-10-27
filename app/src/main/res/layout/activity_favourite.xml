@@ -3,22 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.detail.UserConnectionFragment">
+    tools:context=".ui.favorite.FavouriteActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_user_connection"
+        android:id="@+id/rv_user_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_row_user"/>
+        tools:listitem="@layout/item_row_user" />
 
     <ProgressBar
-        android:id="@+id/pb_user_connection"
+        android:id="@+id/pb_favourite"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
     <TextView
-        android:id="@+id/tv_user_network"
+        android:id="@+id/tv_user_not_found"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -26,5 +27,5 @@
         android:textAlignment="center"
         android:layout_gravity="center"
         android:visibility="gone"
-        tools:text="User Status Network" />
+        android:text="@string/data_not_exist" />
 </FrameLayout>
